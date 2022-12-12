@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="Projet_session2.CreerTrajet"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Projet_session2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+        <TimePicker ClockIdentifier="24HourClock" x:Name="heureDepart" Header="Entrez l'heure de départ" />
+        <TextBlock x:Name="erreurHD" Foreground="red" Visibility="Collapsed" Text="Choisissez un heure"/>
+
+        <TimePicker ClockIdentifier="24HourClock" x:Name="heureArrive" Header="Entrez l'heure d'arriver" />
+        <TextBlock x:Name="erreurHA" Foreground="red" Visibility="Collapsed" Text="Choisissez un heure"/>
+
+        <ComboBox x:Name="villeDepart"   Header="Choisissez une ville de départ"  Width="200"/>
+        
+        <TextBlock x:Name="erreurVD" Foreground="red" Visibility="Collapsed" Text="Choisissez une ville"/>
+        <ComboBox x:Name="villeArrive"   Header="Choisissez une ville d'arrivee"  Width="200"/>
+
+        <TextBlock x:Name="erreurVA" Foreground="red" Visibility="Collapsed" Text="Choisissez une ville"/>
+
+        <CalendarDatePicker Header="Date du trajet" x:Name="date" />
+        <TextBlock x:Name="erreurDate" Foreground="red" Visibility="Collapsed" Text="Choisissez une date"/>
+
+        <ComboBox x:Name="arret"   Header="Y a t'il des arrets ?"  Width="200">
+            <x:String>oui</x:String>
+            <x:String>non</x:String>
+        </ComboBox>
+
+        <NumberBox x:Name="montant" Header="Entrez un montant en dollars" PlaceholderText="0.00" />
+
+        <ComboBox x:Name="vehicule"   Header="Choisissez un vehicule"  Width="200">
+            <x:String>Berline</x:String>
+            <x:String>VUS</x:String>
+        </ComboBox>
+
+        <NumberBox x:Name="nbrPlace" Header="Combien y a t'il de places" PlaceholderText="0" />
+        
+        <Button x:Name="creer" Click="creer_Click" Content="Creer"/>
+    </StackPanel>
+</Page>

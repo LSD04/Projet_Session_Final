@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Projet_session2.AfficherMontant"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Projet_session2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+
+
+        <CalendarDatePicker x:Name="date" PlaceholderText="Choisir une date" Header="Calendar" />
+        <TimePicker x:Name="heure" Header="TimePicker" ClockIdentifier="24HourClock" />
+        <Button x:Name="myButton" Content="Rechercher" VerticalAlignment="Bottom"  Margin="5,5,5,10" HorizontalAlignment="Center" Click="myButton_Click"></Button>
+        <ListView x:Name="lvListe"/>
+    </StackPanel>
+</Page>

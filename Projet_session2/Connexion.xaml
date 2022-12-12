@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Projet_session2.Connexion"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Projet_session2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+       
+        <Grid Margin="0,12,0,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="150"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Background="#D2FEFF">
+                <ListView x:Name="liste" Grid.Column="1" Width="650" />
+            </StackPanel>
+
+            <StackPanel Margin="12" Grid.Column="2" Background="Gray" Height="250" >
+                <TextBox Header="Entrer un nom d'utilisateur" x:Name="username" PlaceholderText="EMail ou nom d'utilisateur" Margin="5,5,5,10" />
+                <TextBlock x:Name="erreurUser" Foreground="Red" Visibility="Collapsed" Text="Entrer un email"/>
+                <PasswordBox  Header="Entrer un mot de passe" x:Name="password" PlaceholderText="Entrez un mot de passe" Margin="5,5,5,10" />
+                <TextBlock x:Name="erreurMdp" Foreground="Red" Visibility="Collapsed" Text="Le mot de passe est obligatoire"/> 
+                <Button x:Name="Login" Click="Login_Click">Se connecter</Button>
+                <Button x:Name="Logup" Click="Logup_Click">Creer un compte</Button>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Page>

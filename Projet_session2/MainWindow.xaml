@@ -1,0 +1,45 @@
+﻿<Window
+    x:Class="Projet_session2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Projet_session2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+
+    <NavigationView x:Name="nvSample" 
+                    PaneDisplayMode="Left" 
+                    PaneTitle="Menu" 
+                    IsBackButtonVisible="Visible" 
+                    IsSettingsVisible="True"
+                    SelectionChanged="NavigationView_SelectionChanged"
+                    Background="#D2FEFF"  >
+        <NavigationView.Header>
+            <TextBlock Text="Connexion" x:Name="Header" />
+        </NavigationView.Header>
+        <NavigationView.MenuItems >
+            <NavigationViewItemHeader Content="Administrateur" Visibility="Visible"/>
+            <NavigationViewItem Icon="Add" Content="Ajouter Villes" Tag="Ajouter des villes" Visibility="Visible" />
+            <NavigationViewItem Icon="List" Content="Trajets en cours" Tag="Voir les trajets en cours" Visibility="Visible"/>
+            <NavigationViewItem Icon="Find" Content="Recherche trajets" Tag="Rechercher les projets selon une periode" Visibility="Visible"/>
+            <NavigationViewItem Icon="Library" Content="Afficher montant" Tag="Afficher les revenus pour chaque trajet" Visibility="Visible" />
+            <NavigationViewItemSeparator />
+            <NavigationViewItemHeader Content="Chauffeur" Visibility="Visible"/>
+            <NavigationViewItem Icon="Add" Content="Creer un tajet" Tag="Creer un trajet" Visibility="Visible" />
+            <NavigationViewItem Icon="list" Content="Historique" Tag="Historique des trajets" Visibility="Visible" />
+            <NavigationViewItemSeparator />
+            <NavigationViewItemHeader Content="Clients" Visibility="Visible" />
+            <NavigationViewItem Icon="Save" Content="S'inscrire" Tag="S'inscrire à un trajet" Visibility="Visible" />
+        </NavigationView.MenuItems>
+        <NavigationView.FooterMenuItems>
+            <NavigationViewItem Content="Deconnexion" Tag="SamplePage4" Icon="Save" Visibility="Visible"/>
+            <NavigationViewItem Content="Your Cart" Tag="SamplePage5" Icon="Shop" Visibility="Visible"/>
+            
+        </NavigationView.FooterMenuItems>
+
+        <Frame x:Name="mainFrame"/>
+    </NavigationView>
+   
+       
+   
+</Window>
