@@ -13,7 +13,7 @@
 
         <CalendarDatePicker x:Name="date" PlaceholderText="Choisir une date" Header="Calendar" />
         <TimePicker x:Name="heure" Header="TimePicker" ClockIdentifier="24HourClock" />
-        <Button x:Name="myButton" Content="Rechercher" VerticalAlignment="Bottom"  Margin="5,5,5,10" HorizontalAlignment="Center" Click="myButton_Click"></Button>
+        <Button x:Name="myButton" Content="Rechercher" VerticalAlignment="Bottom"  Margin="5,5,5,10"  Click="myButton_Click"></Button>
         <ListView x:Name="lvListe"/>
     </StackPanel>
 </Page>
